@@ -13,7 +13,7 @@ var options = {
 }
 
 var client = mqtt.connect(options);
-const port = 3000;
+const port = process.env.PORT;
 
 app.use(express.urlencoded({extended:true}));
 
