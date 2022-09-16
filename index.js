@@ -4,11 +4,9 @@ const mqtt = require('mqtt');
 const app = express();
 
 var options = {
-  host: '859e0bb831174205b230441f4f248e70.s1.eu.hivemq.cloud',
-  port: 8883,
-  protocol: 'mqtts',
-  username: 'CloudMQTT',
-  password: process.env.MQTT_PASSWORD
+  host: 'broker.emqx.io',
+  port: 1883,
+  protocol: 'mqtt'
 }
 
 var client = mqtt.connect(options);
