@@ -4,13 +4,11 @@ require("dotenv").config();
 
 const app = express();
 
-// var options = {
-//   host: '859e0bb831174205b230441f4f248e70.s1.eu.hivemq.cloud',
-//   port: 8883,
-//   protocol: 'mqtts',
-//   username: 'CloudMQTT',
-//   password: process.env.MQTT_PASSWORD
-// };
+var options = {
+  host: 'broker.emqx.io',
+  port: 1883,
+  protocol: 'mqtt'
+}
 
 var client = mqtt.connect("http://broker.emqx.io:1883");
 const port = process.env.PORT || 3000;
